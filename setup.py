@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="sescraper",
-    version="0.0.1",
+    version="0.1.2",
     author="miki164",
     author_email="miki3867@gmail.com",
     description="Package to get daily information about the stock market",

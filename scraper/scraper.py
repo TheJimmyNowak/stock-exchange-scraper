@@ -14,12 +14,12 @@ class FinanceScraper:
         response = requests.get(url, headers=self.USER_AGENT)
         soup = BeautifulSoup(response.text, 'html.parser')
 
-        scraps = [0,0,0]
+        scraps = [0, 0, 0]
 
-        for tag in soup.find_all('td', class_="iyjjgb"):
+        for i, tag in enumerate(soup.find_all('td', class_="iyjjgb")):
             tag = tag.text.replace('\xa0', '')
             tag = float(tag.replace(',', '.'))
             scraps[i] = tag
             
         return scraps
-    
+
